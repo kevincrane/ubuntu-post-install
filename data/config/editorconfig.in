@@ -29,3 +29,7 @@ indent_style = tab
 # Markdown
 [*.md]
 trim_trailing_whitespace = false
+
+# HTML files
+[*.html]
+indent_size = 2
