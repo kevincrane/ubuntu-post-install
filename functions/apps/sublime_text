@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 
 # Sublime Text
 function download_sublime {

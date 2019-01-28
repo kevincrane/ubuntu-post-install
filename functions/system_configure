@@ -3,7 +3,7 @@
 # Automatically set preferred gsettings keys as outlined in the 'gsettings.list' file
 # 'gsettings' can be obtained by executing "dconf watch /" and then manually changing settings
 function gsettings_config {
-	echo_message info "Setting preferred application-specific & desktop settings..."
+	echo_message info "Setting preferred application-specific & desktop settings (gsettings)..."
 	# Variables
 	LIST=$(dirname "$0")'/data/gsettings.list'
 	while IFS= read line
@@ -53,6 +53,14 @@ function hide_snap_folder {
 	fi
 }
 
+function dev_configure {
+    # Make python3 the default version
+    superuser_do "rm /usr/bin/python"
+    superuser_do "ln -s /usr/bin/python3 /usr/bin/python"
+    superuser_do "rm /usr/bin/pip"
+    superuser_do "ln -s /usr/bin/pip3 /usr/bin/pip"
+}
+
 # Configure System
 function system_configure {
 	NAME="System Configuration"
@@ -67,6 +75,7 @@ function system_configure {
 		'disable_crash_dialogs'     'Disable error report dialogs (apport)' \
 		'gsettings_config'          'Set preferred application & desktop settings' \
 		'hide_snap_folder'          'Hide the snap folder in user home' \
+		'dev_configure'             'Configure software development settings (python, etc)' \
 		3>&1 1>&2 2>&3)
 	# check exit status
 	if [ $? = 0 ]; then

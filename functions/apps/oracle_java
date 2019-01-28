@@ -2,8 +2,8 @@
 
 # Install Oracle Java from PPA
 function install_oracle_java {
-	NAME="Oracle Java 9"
-	PACKAGE="oracle-java9-installer"
+	NAME="Oracle Java 11"
+	PACKAGE="oracle-java11-installer"
 	# Do not include the "ppa:" bit, it will break other functions
 	PPA="webupd8team/java"
 	# Add PPA repository

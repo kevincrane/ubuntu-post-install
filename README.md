@@ -28,3 +28,25 @@ You use these scripts, you can just run the main script from the root of the sou
 Alternatively, if you use `bash` and cloned this to your home folder, add the following to your `.bashrc` to run this script on-demand.
 
     export PATH=${PATH}:~/ubuntu-post-install/
+
+## Where to make changes
+
+* `data/config` - dotfiles; installed using `functions/setup_dotfiles`
+* `functions/apps` - list of third-party apps and install steps; must also be added to list in `install_thirdparty`
+* `functions/system_configure` - add one-off development configurations in function `dev_configure` (e.g. making python 3 the default)
+* `data/*.list` - list of packages to be installed or removed in batches
+
+For more detail, you can check in [`functions`](/functions/README.md) or the Organization section above.
+
+## To-dos
+
+* Add Sublime settings to `data/config/sublime_config.in`
+* Add new development packages/libraries/programs
+  * kubernetes, docker, etc
+* Install Pycharm/IntelliJ via Snap
+* Find more apps you need: https://snapcraft.io/store
+* Create dotfiles from here: https://github.com/mathiasbynens/dotfiles
+* Get `venva` command from work laptop, add to `data/config/bash_aliases.in`
+* Fix PS1 in bashrc to be cleaner (just current directory) and git branch
+* Add function for installing python packages (similar to `favs-dev`, but with `pip`)
+* Install Flux

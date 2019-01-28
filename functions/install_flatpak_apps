@@ -28,7 +28,7 @@ function install_flatpak_apps {
 			$LINES $COLUMNS $(( $LINES - 12 )) \
 			'install_flatpak_gimp'      'GIMP' \
 			'install_flatpak_peek'      'Peek' \
-			'install_flatpak_peek'      'Riot' \
+			'install_flatpak_riot'      'Riot' \
 			'install_flatpak_steam'     'Steam' \
 			3>&1 1>&2 2>&3)
 

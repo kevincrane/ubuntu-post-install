@@ -1,14 +1,26 @@
+org.gnome.desktop.calendar show-weekdate true
+org.gnome.desktop.input-sources xkb-options ['caps:escape']
 org.gnome.desktop.interface clock-format 12h
 org.gnome.desktop.interface clock-show-date true
-org.gnome.desktop.wm.preferences button-layout ':close'
+org.gnome.desktop.interface show-battery-percentage true
+org.gnome.desktop.peripherals.mouse accel-profile 'adaptive'
+org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
+org.gnome.gedit.preferences.editor auto-indent true
 org.gnome.gedit.preferences.editor auto-save true
-org.gnome.gedit.preferences.editor create-backup-copy false
+org.gnome.gedit.preferences.editor auto-save-interval uint32 5
+org.gnome.gedit.preferences.editor bracket-matching true
 org.gnome.gedit.preferences.editor display-line-numbers true
-org.gnome.gedit.preferences.editor tab-size 4
+org.gnome.gedit.preferences.editor highlight-current-line true
+org.gnome.gedit.preferences.editor insert-spaces true
+org.gnome.gedit.preferences.editor scheme 'oblivion'
+org.gnome.gedit.preferences.editor tabs-size uint32 4
 org.gnome.mutter center-new-windows true
+org.gnome.nautilus.desktop home-icon-visible true
+org.gnome.nautilus.desktop network-icon-visible true
 org.gnome.nautilus.preferences sort-directories-first true
-org.gnome.Terminal.Legacy.Settings dark-theme true
-org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+org.gnome.shell enable-hot-corners true
+org.gnome.Terminal.Legacy.Keybindings move-tab-left '<Primary><Alt>braceleft'
+org.gnome.Terminal.Legacy.Keybindings move-tab-right '<Primary><Alt>braceright'
+org.gnome.Terminal.Legacy.Keybindings next-tab '<Alt>braceright'
+org.gnome.Terminal.Legacy.Keybindings prev-tab '<Alt>braceleft'
 org.gtk.Settings.Debug enable-inspector-keybinding true
-org.pantheon.desktop.gala.appearance button-layout ':close'
-org.pantheon.terminal.settings natural-copy-paste false

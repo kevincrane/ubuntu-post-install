@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Todoist (third-party client)
+function install_todoist {
+	# Variables
+	NAME="Todoist"
+	VERSION="1.12"
+	FILENAME="Todoist.deb"
+	REMOTE="https://github.com/KryDos/todoist-linux/releases/download/${VERSION}/${FILENAME}"
+	# Download and install remote package
+	echo_message info "Downloading remote package '${FILENAME}' from '${REMOTE}'..."
+	curl -O -L $REMOTE
+	superuser_do "dpkg -i $FILENAME"
+	rm $FILENAME
+}

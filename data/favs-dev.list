@@ -1,11 +1,13 @@
 autotools-dev
-bzr
 git
 gtk-3-examples
 gtk-doc-tools
-icontool
 libgtk-3-dev
 nodejs
 npm
-optipng
+openjdk-11-jdk
+python3-pip
+vim
+virtualbox
+virtualenv
 x11-apps
