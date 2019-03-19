@@ -40,11 +40,7 @@ For more detail, you can check in [`functions`](/functions/README.md) or the Org
 
 ## To-dos
 
-* Add new development packages/libraries/programs
-  * kubernetes, docker, etc
 * Install Pycharm/IntelliJ via Snap
 * Find more apps you need: https://snapcraft.io/store
 * Create dotfiles from here: https://github.com/mathiasbynens/dotfiles
 * Fix PS1 in bashrc to be cleaner (just current directory) and git branch
-* Add function for installing python packages (similar to `favs-dev`, but with `pip`)
-* Install Flux

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Docker and Kubernetes
+function install_docker_k8s {
+    # Docker Variables
+
+    # Add Docker repository
+    # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | superuser_do apt-key add -
+    # superuser_do add-apt-repository "deb [arch=amd64] $REMOTE bionic stable"
+    DOCKER_REMOTE="https://download.docker.com/linux/ubuntu"
+    DOCKER_REPO="deb [arch=amd64] ${REMOTE} bionic stable"
+    add_apt_repo "Docker CE" "${DOCKER_REMOTE}/gpg" "deb [arch=amd64] $DOCKER_REMOTE bionic stable" docker-ce
+
+    K8S_GPG="https://packages.cloud.google.com/apt/doc/apt-key.gpg"
+    K8s_REPO="deb http://apt.kubernetes.io/ kubernetes-xenial main"
+    add_apt_repo "Kubernetes" "$K8S_GPG" "$K8s_REPO" kubernetes
+
+    # Install Docker and Kubernetes
+    superuser_do apt install -y docker-ce kubeadm kubelet kubectl kubernetes-cni
+}
