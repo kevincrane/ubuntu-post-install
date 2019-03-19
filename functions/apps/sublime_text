@@ -19,6 +19,8 @@ function download_sublime {
 function install_sublime_text {
 	status="0"
 	NAME="Sublime Text 3"
+	CONFIG_INPUT=INPUT=$(dirname "$0")'/data/config/sublime_config.in'
+	CONFIG_DIR=~/.config/sublime-text-3/Packages/User
 	while [ "$status" -eq 0 ]; do
 		VERSION=$(eval `resize` && whiptail \
 		--title "$NAME" \
@@ -42,5 +44,6 @@ function install_sublime_text {
 				install_thirdparty
 			;;
 		esac
+		cp $CONFIG_INPUT $CONFIG_DIR
 	done
 }

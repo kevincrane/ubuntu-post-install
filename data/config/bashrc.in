@@ -65,3 +65,9 @@ fi
 
 export EDITOR='vi'
 export VISUAL='vi'
+
+venva() {
+    if [ -e .venv ]; then
+        source .venv/bin/activate
+    fi
+}
