@@ -36,7 +36,7 @@ function install_thirdparty {
         'install_pia'           'Private Internet Access VPN' \
         'install_rvm'           'Ruby Version Manager (RVM)' \
         'install_sublime_text'  'Sublime Text 3' \
-        'install_docker_k8s'    'Docker and Kubernetes' \
+        'install_docker_k8s'    'Docker, Kubernetes, GCloud' \
         3>&1 1>&2 2>&3)
 
     # check exit status
